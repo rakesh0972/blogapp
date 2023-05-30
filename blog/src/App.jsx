@@ -6,6 +6,7 @@ import CreatePost from './pages/CreatePost';
 import { useState } from 'react';
 import { auth } from './firebase-config';
 import { signOut } from 'firebase/auth';
+import Details from './pages/Details';
 
 function App() {
 	const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
@@ -45,6 +46,7 @@ function App() {
 						path="/createpost"
 						element={<CreatePost isAuth={isAuth} />}
 					/>
+					<Route exact path="posts/:id" element={<Details isAuth={isAuth} />} />
 				</Routes>
 			</BrowserRouter>
 		</>
