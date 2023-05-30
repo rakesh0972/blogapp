@@ -13,11 +13,12 @@ const Home = (isAuth) => {
 		};
 
 		getPosts();
-	});
+	}, []);
 
 	const deletePost = async (id) => {
 		const postDoc = doc(db, 'posts', id);
 		await deleteDoc(postDoc);
+		window.location.reload();
 	};
 	return (
 		<div className="homePage">

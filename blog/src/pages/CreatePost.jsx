@@ -25,6 +25,7 @@ const CreatePost = ({ isAuth }) => {
 		if (!isAuth) {
 			navigate('/login');
 		}
+		console.log('login effect');
 	}, []);
 
 	return (
