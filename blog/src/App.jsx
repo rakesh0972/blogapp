@@ -14,14 +14,14 @@ function App() {
 		signOut(auth).then(() => {
 			localStorage.clear();
 			setIsAuth(false);
-			window.location.pathname = '/login';
+			window.location.pathname = '/';
 		});
 	};
 
 	return (
 		<>
 			<BrowserRouter>
-				<nav className="bg-red-700">
+				<nav className="bg-blue-700">
 					<Link to="/">Home</Link>
 
 					{!isAuth ? (
