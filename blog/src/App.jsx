@@ -22,15 +22,52 @@ function App() {
 	return (
 		<>
 			<BrowserRouter>
-				<nav className="bg-blue-700">
-					<Link to="/">Home</Link>
+				<Link to="/">
+					<h1
+						className="text-left text-4xl font-thin text-center pt-9  text-green"
+						style={{
+							'font-family': 'Josefin Sans',
+						}}
+					>
+						Over.&.Out
+					</h1>
+				</Link>
+				<nav className="bg-blue-700 py-14 w-full flex justify-center items-center gap-4 ">
+					<div className="text-white">
+						<Link
+							to="/"
+							className="hover:text-green transition-all ease-in 3ms"
+						>
+							Home
+						</Link>
+					</div>
 
 					{!isAuth ? (
-						<Link to="/login">login</Link>
+						<div className="text-white">
+							<Link
+								to="/login"
+								className="hover:text-green transition-all ease-in 3ms"
+							>
+								login
+							</Link>
+						</div>
 					) : (
 						<>
-							<Link to="/createpost">Create</Link>
-							<button onClick={signUserOut}> Log Out</button>
+							<div className="text-white flex gap-4">
+								<Link
+									to="/createpost"
+									className="hover:text-green transition-all ease-in 3ms"
+								>
+									Create
+								</Link>
+								<button
+									onClick={signUserOut}
+									className="hover:text-green transition-all ease-in 3ms"
+								>
+									{' '}
+									Log Out
+								</button>
+							</div>
 						</>
 					)}
 				</nav>
@@ -48,6 +85,10 @@ function App() {
 					/>
 					<Route exact path="posts/:id" element={<Details isAuth={isAuth} />} />
 				</Routes>
+
+				<footer className="text-center font-sans pb-7 text-grey text-sm">
+					Over & Out | 2023
+				</footer>
 			</BrowserRouter>
 		</>
 	);

@@ -14,8 +14,16 @@ const Login = ({ setIsAuth }) => {
 
 	return (
 		<div>
-			<p>Sign in with google</p>
-			<button onClick={signInWithGoogle}>sign in with google</button>
+			<button
+				onClick={signInWithGoogle}
+				className="flex justify-center items-center text-center mx-auto mb-56"
+			>
+				<img
+					src="https://pixlok.com/wp-content/uploads/2021/04/Google-Icon-PNG-768x768.jpg"
+					className="h-6 w-6 bg-brown"
+				/>
+				<h1>sign in with google</h1>
+			</button>
 		</div>
 	);
 };
