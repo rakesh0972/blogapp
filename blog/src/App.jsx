@@ -48,7 +48,7 @@ function App() {
 								to="/login"
 								className="hover:text-green transition-all ease-in 3ms"
 							>
-								login
+								login to post
 							</Link>
 						</div>
 					) : (
